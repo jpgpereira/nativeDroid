@@ -1,0 +1,16 @@
+<span class="nd2-title">Search</span>
+<p>
+	This search box in the header depends on <a href="http://api.jqueryui.com/autocomplete/">jQueryUI's autocomplete</a> and can be simply triggered by the following code:
+</p>
+<p>
+	<pre>new $.nd2Search({
+		<strong>placeholder</strong> : "Input Placeholder",   <i>// Placeholder in the search field</i>
+		<strong>defaultIcon</strong> : "globe-alt",  <i>// optional: icon | null</i>
+		<strong>source</strong> : [{ label : 'Displayed Value', value : 'real-value', icon : 'custom-icon'}],   <i>// <a href='http://api.jqueryui.com/autocomplete/#option-source'>autocomplete : option-source</a></i>
+		<strong>fn</strong> : function(result) { <i>// this function will be executed when a valid result item is selected</i>
+			console.log('--- Your custom handling ---');
+			console.log('you picked: ');
+			console.log(result);
+		}
+	});</pre>
+</p>
